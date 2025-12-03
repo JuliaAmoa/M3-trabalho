@@ -1,6 +1,6 @@
 """Como usar
 1. Certifique-se de que o servidor está rodando em http://localhost:8000
-2. Execute: python client/query_movie.py
+2. Execute: python client/consulta_filmes.py
 3. Digite o título do filme quando solicitado"""
 import requests
 
