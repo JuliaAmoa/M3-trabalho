@@ -3,7 +3,7 @@
 2. Defina a variável OMDB_API_KEY (ou crie .env com OMDB_API_KEY=sua_chave)
 3. Rode: uvicorn app.main:app --reload --port 8000"""
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 import os
 import requests
@@ -14,7 +14,8 @@ from fastapi import FastAPI, HTTPException, Query
 load_dotenv()
 
 OMDB_URL: str = "http://www.omdbapi.com/"
-OMDB_KEY: Optional[str] = os.getenv("OMDB_API_KEY")
+OMDB_KEY = os.getenv("OMDB_API_KEY")
+
 
 app: FastAPI = FastAPI(title="Consulta de Filmes (OMDb)")
 
